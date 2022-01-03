@@ -8,15 +8,18 @@
        http://www.springframework.org/schema/context/spring-context.xsd" >
 
     <!--Méthode par configuration XML-->
-    <bean id="helloWorldBean" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot.HelloWorldBean"/>
+    <bean id="helloWorldBean" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.HelloWorldBean"/>
 
-    <bean id="helloWorldBeanInjection" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot.HelloWorldBeanInjection">
+    <bean id="helloWorldBeanInjection" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.HelloWorldBeanInjection">
         <property name="helloWorldBean" ref="helloWorldBean"/>
     </bean>
 
-    <bean id="temperatureServiceBeanImplSingleton" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot.Bean.TemperatureServiceBeanImpl" scope="singleton"/>
+    <bean id="temperatureServiceBeanImplSingleton" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.TemperatureServiceBeanImpl" scope="singleton"/>
+    <bean id="temperatureBean" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.TemperatureBeanImpl" scope="prototype">
+        <property name="temperatureServiceBean" ref="temperatureServiceBeanImplSingleton"/>
+    </bean>
 
     <!--Méthode par Annotation-->
     <context:annotation-config/>
-    <context:component-scan base-package="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot"/>
+    <context:component-scan base-package="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring"/>
 </beans>

@@ -1,6 +1,5 @@
-package org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot;
+package org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
