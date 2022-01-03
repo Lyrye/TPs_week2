@@ -1,6 +1,4 @@
-package org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot.Bean;
-
-import org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot.Bean.TemperatureBean;
+package org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean;
 
 public class TemperatureBeanImpl implements TemperatureBean {
 
