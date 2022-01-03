@@ -7,12 +7,14 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd" >
 
+    <!--Méthode par configuration XML-->
     <bean id="helloWorldBean" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot.HelloWorldBean"/>
 
     <bean id="helloWorldBeanInjection" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot.HelloWorldBeanInjection">
         <property name="helloWorldBean" ref="helloWorldBean"/>
     </bean>
 
+    <!--Méthode par Annotation-->
     <context:annotation-config/>
     <context:component-scan base-package="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot"/>
 </beans>
