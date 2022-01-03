@@ -14,4 +14,12 @@ public class AppTest {
         // Vérifie que le bean a bien été injecté, sinon le test echoue
         Assertions.assertNotNull(bean.getHelloWorldBean());
     }
+
+    @Test
+    public void should_simple_bean_be_injected_annotation() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("application-context.xml");
+        HelloWorldBeanInjectionAnnotation bean = applicationContext.getBean(HelloWorldBeanInjectionAnnotation.class);
+        // Vérifie que le bean a bien été injecté, sinon le test echoue
+        Assertions.assertNotNull(bean.getHelloWorldBeanAnnotation());
+    }
 }
