@@ -9,4 +9,8 @@
         <property name="helloWorldBean" ref="helloWorldBean"/>
     </bean>
 
+    <bean id="temperatureServiceBeanImplSingleton" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot.Bean.TemperatureServiceBeanImpl" scope="singleton"/>
+
+
+
 </beans>
