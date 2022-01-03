@@ -7,6 +7,7 @@ public class TemperatureServiceBeanImpl implements TemperatureServiceBean {
 
     public static Map<String, Integer> temperatureByCoutries;
 
+
     static {
         temperatureByCoutries.put("fr",10);
         temperatureByCoutries.put("en",8);

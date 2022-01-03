@@ -15,6 +15,9 @@
     </bean>
 
     <bean id="temperatureServiceBeanImplSingleton" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot.Bean.TemperatureServiceBeanImpl" scope="singleton"/>
+    <bean id="temperatureBean" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpringBoot.Bean.TemperatureBeanImpl" scope="prototype">
+        <property name="temperatureServiceBean" ref="temperatureServiceBeanImplSingleton"/>
+    </bean>
 
     <!--Méthode par Annotation-->
     <context:annotation-config/>
