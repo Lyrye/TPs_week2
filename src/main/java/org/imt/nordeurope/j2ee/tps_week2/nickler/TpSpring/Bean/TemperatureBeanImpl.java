@@ -11,7 +11,9 @@ public class TemperatureBeanImpl implements TemperatureBean {
 
     @Override
     public void printTemperature() {
-
+        System.out.println(temperatureServiceBean.getTemperature(this.name));
+        System.out.println(temperatureServiceBean.hashCode());
+        System.out.println(this.getName());
     }
 
     @Override
