@@ -9,4 +9,9 @@ public class TemperatureBeanImpl implements TemperatureBean {
     public void printTemperature() {
 
     }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
 }
