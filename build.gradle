@@ -31,8 +31,12 @@ dependencies {
     implementation group: 'org.springframework', name: 'spring-context', version: '5.3.14'
     implementation group: 'org.springframework', name: 'spring-beans', version: '5.3.14'
     implementation 'javax.inject:javax.inject:1'
-    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest:2.6.2'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.6.2'
+
+    implementation 'org.apache.tomcat.embed:tomcat-embed-core:9.0.56'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-logging-juli:8.5.2'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.56'
 }
 
 test {
