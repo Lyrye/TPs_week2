@@ -17,6 +17,7 @@
 
 <h3>TP</h3>
 <ul>
+    <li><a href="Temperature?action=GetTempartures">Partie 1</a></li>
 
 </ul>
 

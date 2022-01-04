@@ -3,11 +3,11 @@ package org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean;
 import javax.annotation.PostConstruct;
 
 public class TemperatureMain {
-    private TemperatureBean frBean;
-    private TemperatureBean deBean;
-    private TemperatureBean enBean;
+    public static TemperatureBean frBean;
+    public static TemperatureBean deBean;
+    public static TemperatureBean enBean;
 
-    public void printTemperatureOfCountry(String country){
+    public static void printTemperatureOfCountry(String country){
         switch(country){
             case "fr":
                 frBean.printTemperature();
@@ -30,7 +30,7 @@ public class TemperatureMain {
        enBean = new TemperatureBeanImpl("en");
     }
 
-    public void printTemperaturs(){
+    public static void printTemperaturs(){
         for(int i =0;i<4;i++){
             frBean.printTemperature();
             enBean.printTemperature();
