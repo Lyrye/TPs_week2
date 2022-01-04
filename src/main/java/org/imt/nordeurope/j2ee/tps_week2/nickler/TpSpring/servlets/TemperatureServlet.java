@@ -20,9 +20,7 @@ public class TemperatureServlet extends HttpServlet {
 
 
         if(request.getParameter("action") !=null && request.getParameter("action").equals("GetTempartures")){
-            request.setAttribute("fr",TemperatureMain.frBean);
-            request.setAttribute("de",TemperatureMain.deBean);
-            request.setAttribute("en",TemperatureMain.enBean);
+
         }
         RequestDispatcher requestDispatcher;
         requestDispatcher = getServletContext().getRequestDispatcher("/Temperature.jsp");

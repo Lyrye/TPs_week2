@@ -4,4 +4,5 @@ public interface TemperatureBean {
 
     void printTemperature();
     String getName();
+    void setName(String name);
 }

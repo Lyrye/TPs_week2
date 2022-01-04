@@ -4,11 +4,6 @@ public class TemperatureBeanImpl implements TemperatureBean {
 
     private String name;
     private TemperatureServiceBean temperatureServiceBean;
-
-    public TemperatureBeanImpl(String name){
-        this.name = name;
-    }
-
     @Override
     public void printTemperature() {
         System.out.println(temperatureServiceBean.getTemperature(this.name));
@@ -19,6 +14,11 @@ public class TemperatureBeanImpl implements TemperatureBean {
     @Override
     public String getName() {
         return this.name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setTemperatureServiceBean(TemperatureServiceBeanImpl temperatureServiceBean) {
