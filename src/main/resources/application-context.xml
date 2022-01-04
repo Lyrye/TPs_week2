@@ -22,11 +22,6 @@
         <property name="temperatureServiceBean" ref="temperatureServiceBeanImplSingleton"/>
     </bean>
 
-    <bean id="mainBean" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.TemperatureMain"/>
-    <bean id="main" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.Main">
-        <property name="temperatureMain" ref="mainBean"/>
-    </bean>
-
 
     <!--Méthode par Annotation-->
     <context:annotation-config/>

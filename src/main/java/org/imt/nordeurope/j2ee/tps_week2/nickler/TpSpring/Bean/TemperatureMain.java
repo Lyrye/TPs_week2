@@ -1,13 +1,17 @@
 package org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import javax.annotation.PostConstruct;
 
+@SpringBootApplication
 public class TemperatureMain {
-    public  TemperatureBean frBean;
-    public  TemperatureBean deBean;
-    public  TemperatureBean enBean;
+    public TemperatureBean frBean;
+    public TemperatureBean deBean;
+    public TemperatureBean enBean;
 
-    public  void printTemperatureOfCountry(String country){
+    public void printTemperatureOfCountry(String country){
         switch(country){
             case "fr":
                 frBean.printTemperature();
@@ -25,12 +29,11 @@ public class TemperatureMain {
 
     @PostConstruct
     private void postConstruct() {
-       frBean = new TemperatureBeanImpl();
        frBean.setName("fr");
-       deBean = new TemperatureBeanImpl();
-        frBean.setName("de");
-       enBean = new TemperatureBeanImpl();
-        frBean.setName("en");
+        deBean.setName("de");
+        enBean.setName("en");
+
+        printTemperatures();
     }
 
     public void printTemperatures(){
@@ -40,5 +43,9 @@ public class TemperatureMain {
             enBean.printTemperature();
             deBean.printTemperature();
         }
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(TemperatureMain.class, args);
     }
 }
