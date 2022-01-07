@@ -7,6 +7,7 @@ import javax.annotation.PostConstruct;
 
 @SpringBootApplication
 public class TemperatureMain {
+
     public TemperatureBean frBean;
     public TemperatureBean deBean;
     public TemperatureBean enBean;
@@ -47,5 +48,17 @@ public class TemperatureMain {
 
     public static void main(String[] args) {
         SpringApplication.run(TemperatureMain.class, args);
+    }
+
+    public void setFrBean(TemperatureBean frBean) {
+        this.frBean = frBean;
+    }
+
+    public void setDeBean(TemperatureBean deBean) {
+        this.deBean = deBean;
+    }
+
+    public void setEnBean(TemperatureBean enBean) {
+        this.enBean = enBean;
     }
 }
