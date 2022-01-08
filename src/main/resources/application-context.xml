@@ -14,9 +14,26 @@
         <property name="helloWorldBean" ref="helloWorldBean"/>
     </bean>
 
+    <bean id="temperatureServiceBeanImpl" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.TemperatureServiceBeanImpl" scope="singleton"/>
+
+    <bean id="temperatureBeanImplFr" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.TemperatureBeanImpl" scope="prototype">
+        <property name="service" ref="temperatureServiceBeanImpl"/>
+    </bean>
+    <bean id="temperatureBeanImplEn" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.TemperatureBeanImpl" scope="prototype">
+        <property name="service" ref="temperatureServiceBeanImpl"/>
+    </bean>
+    <bean id="temperatureBeanImplDe" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.TemperatureBeanImpl" scope="prototype">
+        <property name="service" ref="temperatureServiceBeanImpl"/>
+    </bean>
+
+    <bean id="mainTemperature" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.TemperatureMain">
+        <property name="frBean" ref="temperatureBeanImplFr"/>
+        <property name="deBean" ref="temperatureBeanImplDe"/>
+        <property name="enBean" ref="temperatureBeanImplEn"/>
+    </bean>
 
 
-    <bean id="temperatureServiceBeanImplSingleton" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.TemperatureServiceBeanImpl" scope="singleton"/>
+    <!--<bean id="temperatureServiceBeanImplSingleton" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.TemperatureServiceBeanImpl" scope="singleton"/>
 
     <bean id="temperatureBeanFr" class="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean.TemperatureBeanImpl" scope="prototype">
         <property name="temperatureServiceBean" ref="temperatureServiceBeanImplSingleton"/>
@@ -32,9 +49,9 @@
         <property name="frBean" ref="temperatureBeanFr"/>
         <property name="deBean" ref="temperatureBeanDe"/>
         <property name="enBean" ref="temperatureBeanEn"/>
-    </bean>
+    </bean>-->
 
     <!--Méthode par Annotation-->
     <context:annotation-config/>
-    <context:component-scan base-package="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring"/>
+    <context:component-scan base-package="org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.BeanAnnotation"/>
 </beans>

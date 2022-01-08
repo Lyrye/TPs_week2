@@ -1,5 +1,6 @@
-package org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring;
+package org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.BeanAnnotation;
 
+import org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.BeanAnnotation.HelloWorldBeanAnnotation;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;

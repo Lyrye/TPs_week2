@@ -3,11 +3,12 @@ package org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.Bean;
 public class TemperatureBeanImpl implements TemperatureBean {
 
     private String name;
-    private TemperatureServiceBean temperatureServiceBean;
+    TemperatureServiceBean service;
+
     @Override
     public void printTemperature() {
-        System.out.println(temperatureServiceBean.getTemperature(this.name));
-        System.out.println(temperatureServiceBean.hashCode());
+        System.out.println(service.getTemperature(this.name));
+        System.out.println(service.hashCode());
         System.out.println(this.getName());
     }
 
@@ -21,11 +22,9 @@ public class TemperatureBeanImpl implements TemperatureBean {
         this.name = name;
     }
 
-    public void setTemperatureServiceBean(TemperatureServiceBeanImpl temperatureServiceBean) {
-        this.temperatureServiceBean = temperatureServiceBean;
+    @Override
+    public void setService(TemperatureServiceBean service) {
+        this.service = service;
     }
 
-    public TemperatureServiceBean getTemperatureServiceBean() {
-        return temperatureServiceBean;
-    }
 }

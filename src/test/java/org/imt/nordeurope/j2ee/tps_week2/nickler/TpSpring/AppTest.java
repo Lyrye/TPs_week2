@@ -1,5 +1,6 @@
 package org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring;
 
+import org.imt.nordeurope.j2ee.tps_week2.nickler.TpSpring.BeanAnnotation.HelloWorldBeanInjectionAnnotation;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;

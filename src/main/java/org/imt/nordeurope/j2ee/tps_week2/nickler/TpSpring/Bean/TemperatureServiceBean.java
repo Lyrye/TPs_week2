@@ -5,7 +5,4 @@ import java.math.BigDecimal;
 public interface TemperatureServiceBean {
 
     BigDecimal getTemperature(String country);
-
-    public TemperatureServiceBean temperatureServiceSingleton();
-
 }

@@ -30,7 +30,7 @@ public class TemperatureMain {
 
     @PostConstruct
     private void postConstruct() {
-       frBean.setName("fr");
+        frBean.setName("fr");
         deBean.setName("de");
         enBean.setName("en");
 
@@ -40,14 +40,10 @@ public class TemperatureMain {
     public void printTemperatures(){
         System.out.println("Printing Temperatures");
         for(int i =0;i<4;i++){
-            frBean.printTemperature();
-            enBean.printTemperature();
-            deBean.printTemperature();
+            printTemperatureOfCountry(frBean.getName());
+            printTemperatureOfCountry(enBean.getName());
+            printTemperatureOfCountry(deBean.getName());
         }
-    }
-
-    public static void main(String[] args) {
-        SpringApplication.run(TemperatureMain.class, args);
     }
 
     public void setFrBean(TemperatureBean frBean) {
@@ -61,4 +57,10 @@ public class TemperatureMain {
     public void setEnBean(TemperatureBean enBean) {
         this.enBean = enBean;
     }
+
+    public static void main(String[] args) {
+        SpringApplication.run(TemperatureMain.class, args);
+    }
+
+
 }
